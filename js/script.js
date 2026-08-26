@@ -10,9 +10,6 @@ var nasc = parseInt(propot("Digite seu ano de nascimento: "));
 //declaro a variavel nome e atribuo a ela o valor digitado (padrao str)
 let nome = propot("Digite seu nome: ");
 
-//declaro a constante viva como true
-const viva = confirm("Clique em ok se está viva.");
-
 //declaro a variavel altura e atribuo a ela o valor digitado como float
 let altura = parseFloat("Digite sua aula em metros: ");
 
