@@ -18,6 +18,6 @@ console.log ("imc", typeof(imc));
 
 let msg = `Nome: ${nome}\nAno de Nascimento: ${nasc}\nViva: ${viva}`;
 msg = + `\nAltura: ${altura}\nSexo: ${sexo}\nPeso: ${peso}`;
-msg = msg + `\nIMC: ${imc.toExponential(2)}`;
+msg = msg + `\nIMC: ${imc.toFixed(2)}`;
 
 alert(msg);
