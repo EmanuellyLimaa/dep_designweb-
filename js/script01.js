@@ -1,11 +1,15 @@
-let n1 = prompt("Digite n1");
-n1 = Number(n1);
-let n2 = prompt("Digite n2");
-n2 = Number(n2);
+function saudacoes_a(){
+    alert(`Olá Fulano, seja bem-vindo!`);
+}
 
-alert(`${n1} + ${n2} = ${n1 + n2}`);
-alert(`${n1} - ${n2} = ${n1 - n2}`);
-alert(`${n1} * ${n2} = ${n1 * n2}`);
-alert(`${n1} / ${n2} = ${n1 / n2}`);
-alert(`${n1} % ${n2} = ${n1 % n2}`);
-alert(`${n1} ** ${n2} = ${n1 ** n2}`);
+function saudacoes_a(nome){
+    alert(`Olá ${nome}, seja bem-vindo!`);
+}
+
+function saudacoes_a(nome="Desconhecido"){
+    alert(`Olá ${nome}, seja bem-vindo!`)
+}
+
+function saudacoes_a(nome="Desconhecido"){
+    return `Olá ${nome}, seja bem-vindo!`;
+}
