@@ -25,9 +25,11 @@ for(let a = 0; a<agenda.length; i++){
     console.log(`Nome: ${nome} | Idade: ${idade}`);
 }
 
-const nome = document.getElementById("lista")
+const nome = document.getElementById("nome");
+const idade = document.getElementById("idade");
+const lista = document.getElementById("lista");
+const formulario = document.getElementById("formulario");
 
-const formulario = document.getElementById("formulario")
 formulario.addEventListener("submit", function(e){
     e.preventDefault();
     //amigos.push(nome.value);
