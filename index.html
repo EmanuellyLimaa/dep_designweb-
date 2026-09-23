@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Aula 04: Estrutura de Controle (Parte 2) </title>
+    <title> Aula 05: Arrays </title>
 </head>
 <body>
 
     <h1> Repositório para Disciplina de Design Web </h1>
-    <h2> Data: 16/09/2026 </h2>
-    <button id="btn_a"> Saudação A </button>
-    <button id="btn_b"> Saudação B </button>
-    <button id="btn_cp"> Saudação C (Padrão) </button>
-    <button id="btn_cn"> Saudação C (Com Nome) </button>
-    <button id="btn_dp"> Saudação D (Padrão) </button>
-    <button id="btn_dn"> Saudação D (Com Nome) </button>
-
-    <script src="./js/script03.js" defer></script>
+    <h2> Data: 23/09/2026 </h2>
+    <form id="formulario">
+        <input type="text" required 
+            placeholder="Digite um nome"
+            minlength="3" id="nome">
+        <input type="number" min="0" max="200" 
+            placeholder="Idade" id="idade"/>
+        <input type="submit"/>
+    </form>
+    <ul id="lista">
+        <li> Nenhum amigo cadastrado. </li>
+    </ul>
+    <script src="./js/script01.js" defer></script>
     
 </body>
 </html>
