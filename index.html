@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Aula 07: Strings </title>
 </head>
-<body onload="listarBolos(null);">
-    <form id="busca">
-        <input type="search" name="termo" placeholder="Buscar" />
+<body onload="saudacao(null);">
+    <form id="cadastrar">
+        <div>
+            <input type="text" name="nome" placeholder="Digite seu nome" />
+        </div> 
+
+        <div>
+            <label for="nasc"> Data de Nascimento </label>
+            <input type="date" name="nasc" required/>
+
+        <div> 
+        <input type="submit"/>
+        </div>
     </form>
+    <p id="msg"></p>
     <ul id="lista"></ul>
     <script src="./JS/script01.js"></script>
 

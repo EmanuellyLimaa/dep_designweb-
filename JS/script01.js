@@ -1,44 +1,37 @@
 //Processamentos-Memoria
-const bolos = [
-    "Bolo de Chocolate", 
-    "Bolo de Cenoura com Combertura de Chocolate", 
-    "Bolo de Laranja", 
-    "Bolo de Queijo", 
-    "Bolo Recheado de Chocolate", 
-    "Bolo de Baunilha",
-]
+const hoje = new Date();
 
-//Entradas
-const buscar = document.getElementById("busca");
-const termo = buscar.termo;
+//entrada 
+const cadastro = document.getElementById("cadastro");
+const nome = cadastro.nome;
+const nasc = cadastro.nasc;
 
-//Saidas 
-const listas = document.getElementById("lista");
+//saida 
+const msg = document.getElementById("msg");
 
-//eventos 
-function listarBolos(t){
-    let resultados =[];
-    if (t == null){
-        resultados = bolos; 
-    }else{
-        t = t.trim().toLowerCase();
-        for(let i = 0; i<bolos.length; i++){
-            let nome = bolos[i]
-            if (nome.toLowerCase().trim().includes(t)){
-                resultados.push(nome)
-            }
+//evento 
+function saudacao() {
+    let m = "";
+    if (nome.value == undefined || nome.value.trim() == "") {
+        m = `Olá, hoje é ${hoje.getDate()} / ${hoje.getMonth() + 1} / ${hoje.getFullYear()}!`
+    }else {
+        m = `Olá ${hoje.getDate()} / ${hoje.getMonth() + 1} / ${hoje.getFullYear()}!`
+        let dt_nasc = new Date(nasc.value);
+        let dt_niv = new Date(`${hoje.getFullYear(), dt_nasc.getMonth(), dt_nasc.getDate()}`)
+        let dif = 0;
+        if (hoje > dt_niv){
+            dif = hoje - dt_nasc;
+
+            m = m + `<br/>Passou ${dif/(1000*60*60*24)} dias`
+        }else{
+            dif = dt_nasc - hoje;
+            m = m + `<br/>Falta ${dif/(1000*60*60*24)} dias`
         }
-    }
-    let itens = "";
-    for(let i = 0; i < resultados.length; i++){
-        let item = resultados[i];
-        let li = `<li>${item}</li>`
-        itens = itens + li;
-    }
-    lista.innerHTML = itens;
-}
 
-buscar.addEventListener("submit", function(e){
+    }
+    msg.innerHTML = m;
+}
+cadastro.addEventListener("submit", function(e){
     e.preventDefault();
-    listarBolos(termo.value);
+    saudacao();
 })
