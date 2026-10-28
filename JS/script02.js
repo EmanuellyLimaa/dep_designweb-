@@ -17,7 +17,8 @@ class Animal{
         this.peso = this.peso = kg;
         alert("caguei");
     }
-    saudar(){
+    
+    (){
         let msg = `Nome: ${this.nome}\n`;
         msg = msg + `Peso: ${this.peso}\n`;
         msg = msg + `Altura: ${this.altura}\n`;
